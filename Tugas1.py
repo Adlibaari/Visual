@@ -23,8 +23,8 @@ with st.sidebar:
       st.write('Color:', Color)
       st.write("Circle Area:", Circle_area)
 
-Data = pd.read_csv(r"C:\Users\Puteri Setyo Utami\Downloads\factbook.csv")
-
+url = 'https://raw.githubusercontent.com/Adlibaari/Visual/blob/e1f5d1c8a57d4698c77dd67b76a94ba5552839de/factbook.csv'
+Data = pd.read_csv(url,index_col=0)
 fig = px.scatter(data_frame=Data,x=X, y=Y,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
 
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
