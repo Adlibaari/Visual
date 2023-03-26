@@ -18,6 +18,9 @@ with st.sidebar:
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
 
+url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
+Data = pd.read_csv(url, index_col=0)
+
 with col1:
       X1 = st.selectbox(
       'X',
