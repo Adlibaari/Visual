@@ -14,19 +14,6 @@ with st.sidebar:
       (Data.columns.values))
       Circle_area = st.slider('Circle Area', 0, 100, 60)
 
-with st.sidebar:
-      Size = st.selectbox(
-      'Size',
-      (Data.columns.values))
-      Color = st.selectbox(
-      'Color',
-      (Data.columns.values))
-      Circle_area = st.slider('Circle Area', 0, 100, 60)
-
-      st.write('Size:', Size)
-      st.write('Color:', Color)
-      st.write("Circle Area:", Circle_area)
-
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
 
