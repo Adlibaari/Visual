@@ -6,7 +6,6 @@ url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
 Data = pd.read_csv(url)
 
 col1,col2 = st.columns(2)
-col3, col4 = st.columns(2)
 
 with col1:
       X1 = st.selectbox(
@@ -28,6 +27,8 @@ Circle_area = st.slider('Circle Area', 0, 100, 60)
 fig = px.scatter(data_frame=Data,x=X1, y=Y1,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
 st.plotly_chart(fig, use_container_width=True)
 
+col3, col4 = st.columns(2)
+
 with col3:
       X2 = st.selectbox(
       'X',
@@ -36,7 +37,7 @@ with col3:
       'Size',
       (Data.columns.values), key='Chart7')
 
-with col3:
+with col4:
       Y2 = st.selectbox(
       'Y',
       (Data.columns.values),  key='Chart4')
