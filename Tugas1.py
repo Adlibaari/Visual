@@ -21,9 +21,10 @@ with col1:
       Color = st.selectbox(
       'Color',
       (Data.columns.values), key='Chart6')
-      Circle_area = st.slider('Circle Area', 0, 100, 60)
-      fig = px.scatter(data_frame=Data,x=X1, y=Y1,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
-      st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+      
+Circle_area = st.slider('Circle Area', 0, 100, 60)
+fig = px.scatter(data_frame=Data,x=X1, y=Y1,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area)
+st.plotly_chart(fig, use_container_width=True)
 
 with col2:
       X2 = st.selectbox(
