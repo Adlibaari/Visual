@@ -23,7 +23,7 @@ with col2:
       'Color',
       (Data.columns.values), key='Chart6')
       
-Circle_area = st.slider('Circle Area', 0, 100, 60)
+Circle_area = st.slider('Circle Area', 0, 100, 60, key='Slider1')
 fig = px.scatter(data_frame=Data,x=X1, y=Y1,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area,hover_name='Country')
 st.plotly_chart(fig, use_container_width=True)
 
@@ -45,7 +45,7 @@ with col4:
       'Color',
       (Data.columns.values), key='Chart8')
       
-Circle_area2 = st.slider('Circle Area', 0, 100, 60)
+Circle_area2 = st.slider('Circle Area', 0, 100, 60, key='Slider2')
 fig = px.scatter(data_frame=Data,x=X2, y=Y2,size =Size,color=Color,log_x=True,log_y=True,size_max=Circle_area2,hover_name='Country')
 st.plotly_chart(fig, theme="streamlit", use_container_width=True)
 
