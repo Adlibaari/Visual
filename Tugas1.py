@@ -5,7 +5,8 @@ import streamlit as st
 url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
 Data = pd.read_csv(url)
 
-col1, col2 = st.columns(2)
+col1 = st.columns(2)
+col2 = st.columns(2)
 
 with col1:
       X1 = st.selectbox(
