@@ -2,6 +2,9 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
+Data = pd.read_csv(url)
+
 with st.sidebar:
       Size = st.selectbox(
       'Size',
@@ -10,9 +13,6 @@ with st.sidebar:
       'Color',
       (Data.columns.values))
       Circle_area = st.slider('Circle Area', 0, 100, 60)
-
-url = 'https://raw.githubusercontent.com/Adlibaari/Visual/main/factbook.csv'
-Data = pd.read_csv(url)
 
 with st.sidebar:
       Size = st.selectbox(
